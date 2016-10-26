@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP4GIT
 {
-    // probandooooooooooooooooooooooooooooooooo
+   
   public class CapaAplicacion
     {
        public CapaAplicacion()
