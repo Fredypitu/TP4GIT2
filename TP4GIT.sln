@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP4GIT", "TP4GIT\TP4GIT.csproj", "{36923C05-6C9E-4D45-ABA8-D1C028E53D65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio 4", "Ejercicio 4\Ejercicio 4.csproj", "{AE848C03-A08C-4015-9268-4883DB90E72F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{36923C05-6C9E-4D45-ABA8-D1C028E53D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36923C05-6C9E-4D45-ABA8-D1C028E53D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36923C05-6C9E-4D45-ABA8-D1C028E53D65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE848C03-A08C-4015-9268-4883DB90E72F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE848C03-A08C-4015-9268-4883DB90E72F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE848C03-A08C-4015-9268-4883DB90E72F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE848C03-A08C-4015-9268-4883DB90E72F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
