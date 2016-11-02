@@ -124,22 +124,22 @@ namespace EJ2
 
                         if (pTipoCuenta == "CC")
                         {
-                            if (iFC.DebitarSaldoCC(monto))
+                            try
                             {
+                                iFC.DebitarSaldoCC(monto);
                                 Console.WriteLine("OPERACION REALIZADA EXITOSAMENTE");
                             }
-                            else
+                            catch (SaldoInsuficiente)
                             {
                                 Console.WriteLine("OPERACION NO REALIZADA");
                             }
+                           
                         }
                         else
                         {
                             try
                             {
                                 iFC.DebitarSaldoCA(monto);
-
-
                                 Console.WriteLine("OPERACION REALIZADA EXITOSAMENTE");
                             }
                             catch (SaldoInsuficiente)
@@ -160,24 +160,34 @@ namespace EJ2
 
                         if (pTipoCuenta == "CC")
                         {
-                            if (iFC.AcreditarSaldoCC(monto))
+                            try
                             {
+                                iFC.AcreditarSaldoCC(monto);
                                 Console.WriteLine("OPERACION REALIZADA EXITOSAMENTE");
                             }
-                            else
+                            catch (SaldoNegativo)
                             {
-                                Console.WriteLine("OPERACION NO REALIZADA");
+                                Console.WriteLine("EL SALDO NO PUEDE SER NEGATIVO");
                             }
+                           
                         }
                         else
                         {
-                            if (iFC.AcreditarSaldoCA(monto))
                             {
-                                Console.WriteLine("OPERACION REALIZADA EXITOSAMENTE");
-                            }
-                            else
-                            {
-                                Console.WriteLine("OPERACION NO REALIZADA");
+                                try 
+                                {
+                                    iFC.AcreditarSaldoCA(monto);
+                                    Console.WriteLine("OPERACION REALIZADA EXITOSAMENTE");
+                                }
+                                catch (ArgumentException) 
+                                {
+                                    Console.WriteLine("EL SALDO NO PUEDE SER 0");
+                                }
+                                catch (SaldoNegativo)
+                                {
+                                    Console.WriteLine("EL SALDO NO PUEDE SER NEGATIVO");
+                                }
+
                             }
                         }
 

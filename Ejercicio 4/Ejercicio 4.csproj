@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministradorCuentaException.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="SaldoNegativo.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Cuenta.cs" />
     <Compile Include="Cuentas.cs" />
