@@ -38,7 +38,8 @@ namespace EJ2
         {
             this.iSaldo = this.iSaldo + pSaldo;
         }
-	//Declaro metodo que debita saldo a una cuenta, el monto es pasado por parámetro. Retorna un 	valor de verdad (V o F) si se realizo la operacion
+        //Declaro metodo que debita saldo a una cuenta, el monto es pasado por parámetro. 
+        //Si el usuario tiene saldo suficiente, se debitará el monto, en caso contrario, el proceso se corta y se ñanza una excepción.
         public bool DebitarSaldo(double pSaldo)
         {
             if (this.Saldo + iAcuerdo < pSaldo )
