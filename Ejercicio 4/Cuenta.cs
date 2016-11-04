@@ -33,9 +33,19 @@ namespace EJ2
         {
             get { return this.iAcuerdo; }
         }
-	//Declaro metodo que acredita saldo a una cuenta, el monto es pasado por parámetro
+	//Declaro metodo que acredita saldo a una cuenta, el monto es pasado por parámetro, si el monto es un numero negativo
+    //se laza una excepción SaldoNegativo, o si el saldo a acreditar es 0, tambien se lanza una excepción. 
         public void AcreditarSaldo(double pSaldo)
         {
+            if (pSaldo < 0)
+            {
+                throw new SaldoNegativo();
+            }
+
+            if (pSaldo == 0)
+            {
+                throw new ArgumentException();
+            }
             this.iSaldo = this.iSaldo + pSaldo;
         }
         //Declaro metodo que debita saldo a una cuenta, el monto es pasado por parámetro. 

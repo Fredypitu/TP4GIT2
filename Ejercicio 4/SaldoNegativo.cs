@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace Ejercicio_4
 {
-    public class SaldoInsuficiente : AdministradorCuentaException
+    public class SaldoNegativo : AdministradorCuentaException
     {
-        public SaldoInsuficiente() {}
+        public SaldoNegativo() { }
     }
 }
