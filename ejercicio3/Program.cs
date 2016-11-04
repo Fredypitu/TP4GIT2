@@ -15,14 +15,15 @@ namespace ejercicio3
                 Console.WriteLine("Ingrese Ruta");
                  string iRuta = Console.ReadLine();
                  string mostrar;
-               try
+            StreamReader leer = new StreamReader(@iRuta);
+            try
                 {
-                    StreamReader leer = new StreamReader(@iRuta);
-                    while ((mostrar = leer.ReadLine()) != null)
+                
+                while ((mostrar = leer.ReadLine()) != null)
                     {
                         Console.WriteLine(mostrar);
                     }
-                    leer.Close();
+                  //  leer.Close();
                 }
                 catch (FileNotFoundException)
                 {
@@ -40,6 +41,10 @@ namespace ejercicio3
                 {
                     Console.WriteLine("ruta mal escrita");
                 }
+             finally
+             {
+                    leer.Close();
+              }
                 Console.ReadKey();
                 }
     }
